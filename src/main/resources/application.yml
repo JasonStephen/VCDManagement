@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 100
+  application:
+    name: demo
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/vcd_store?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: 123456
+
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+mybatis:
+logging:
+  level:
+    com.hmdp: debug
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
